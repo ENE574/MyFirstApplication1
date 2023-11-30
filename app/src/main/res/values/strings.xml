@@ -10,4 +10,8 @@
     <string name="no">No</string>
     <string name="str_title">Title</string>
     <string name="str_name">Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tab_caption_1_item">Shopping Item</string>
+    <string name="tab_caption_3_browser">Browser</string>
+    <string name="tab_caption_2_map">Map</string>
 </resources>
