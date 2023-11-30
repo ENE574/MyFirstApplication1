@@ -7,72 +7,9 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle_view_books"
+        android:id="@+id/recycleview_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-198dp"
-        tools:layout_editor_absoluteY="35dp" />
-
-
-
-    <!--    <TextView-->
-<!--        android:id="@+id/hello_world"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/hello_world"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.293" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/text_view_hello_world"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text=""-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    &lt;!&ndash; 第一个TextView居中显示 &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/textViewHello"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Hello"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/textViewJNU"-->
-<!--        app:layout_constraintVertical_bias="0.5"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"/>-->
-
-<!--    &lt;!&ndash; 第二个TextView居中显示 &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/textViewJNU"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="JNU"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/textViewHello"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.5"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"/>-->
-
-<!--    &lt;!&ndash; 交换文本的按钮 &ndash;&gt;-->
-<!--    <Button-->
-<!--        android:id="@+id/buttonChangeText"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="change text"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/textViewHello"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:textAllCaps="false"-->
-<!--        app:layout_constraintVertical_bias="0.3"/>-->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
