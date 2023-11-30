@@ -1,4 +1,5 @@
 package com.jnu.student.data;
+
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -8,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+
 public class DataSaver {
     public void Save(Context context, ArrayList<ShopItem> data)
     {
@@ -38,4 +40,3 @@ public class DataSaver {
         return data;
     }
 }
-

@@ -20,9 +20,11 @@ import android.webkit.WebViewClient;
  * create an instance of this fragment.
  */
 public class BrowserFragment extends Fragment {
+
     public BrowserFragment() {
         // Required empty public constructor
     }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -35,12 +37,14 @@ public class BrowserFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
         }
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,24 +53,29 @@ public class BrowserFragment extends Fragment {
         WebView webView=rootView.findViewById(R.id.webview_main);
         WebSettings webSettings=webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        WebViewClient webViewClient = new WebViewClient() {
+
+        webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                //return super.shouldOverrideUrlLoading(view, url);
-                if (url.startsWith("http:")||url.startsWith("https:")||url.startsWith("ftp")){
-                    view.loadUrl(url);
-                    return true;
-                }
-                else if (url.startsWith("scheme://")){
-                    Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                    startActivity(intent);
-                    return true;
-                }
-                return false;
-            }
+                if (url == null) return false;
 
-        };
-        webView.setWebViewClient(webViewClient);
+                try{
+                    if(!url.startsWith("http://") && !url.startsWith("https://")){
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        startActivity(intent);
+                        return true;
+                    }
+                }catch (Exception e){//防止crash (如果手机上没有安装处理某个scheme开头的url的APP, 会导致crash)
+                    return true;//没有安装该app时，返回true，表示拦截自定义链接，但不跳转，避免弹出上面的错误页面
+                }
+
+                //下面的两种方式选择使用其中一种即可
+                // TODO Auto-generated method stub
+                //1：返回值是true的时候控制去WebView打开，为false调用系统浏览器或第三方浏览器
+                view.loadUrl(url);
+                return true;
+            }
+        });
         webView.loadUrl("http://baidu.com");
         return rootView;
     }

@@ -1,17 +1,25 @@
 <resources>
     <string name="app_name">我的第一个应用</string>
-    <string name="hello_world">Hello world</string>string>
-    <string name="hello_android">你好Android</string>string>
     <string name="string_chinese">Chinese</string>
     <string name="string_english">English</string>
+
     <string name="confirmation">Confirmation</string>
     <string name="sure_to_delete">Are you sure to delete this item</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="str_title">Title</string>
     <string name="str_name">Name</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="tab_caption_1_item">Shopping Item</string>
-    <string name="tab_caption_3_browser">Browser</string>
     <string name="tab_caption_2_map">Map</string>
+    <string name="tab_caption_3_browser">Browser</string>
+
+    <string name="tab_caption_4_clock">Clock</string>
+    <string name="tab_caption_4_game">Game</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="score_text">0</string>
+
+
 </resources>
