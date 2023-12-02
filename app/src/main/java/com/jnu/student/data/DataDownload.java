@@ -11,6 +11,9 @@ import java.util.ArrayList;
 
 public class DataDownload{
 
+    public DataDownload() {
+    }
+
     public String download(String url_) {
         try {
             // 创建URL对象
